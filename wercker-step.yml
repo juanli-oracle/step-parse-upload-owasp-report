@@ -1,0 +1,21 @@
+name: parse-upload-owasp-report
+version: 0.1.0
+description: Parse OWASP dependency-check report to generate occurrences and upload to grafeas server
+keywords:
+  - dependency-check-report
+  - occurrences
+  - grafeas
+properties:
+  classpath:
+    type: string
+    default: $WERCKER_CACHE_DIR/owasp/generateOccurrences.jar:$WERCKER_CACHE_DIR/owasp/com.nimbusds.oauth2-oidc-sdk.jar:$WERCKER_CACHE_DIR/owasp/json-smart-12.jar:$WERCKER_CACHE_DIR/owasp/com.sun.mail.javax.mail.jar
+    required: false
+  dependencyReportJSON:
+    type: string
+    default: $WERCHER_CACHE_DIR/dependency-check-report.json
+    required: false
+  urlGrafeas:
+    type: string
+    default: UNKNOWN
+    required: false
+

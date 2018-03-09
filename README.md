@@ -2,9 +2,11 @@
 
 A wercker step parsing the OWASP dependency-check-report.json to generate notes and occurrences and upload to grafeas server.
 
-## OWASP dependency-check Information
+## OWASP dependency-check & Grafeas Information
 
 For more information on OWASP dependency-check tool please see the [OWASP website](https://www.owasp.org/index.php/OWASP_Dependency_Check) or [documentation on GitHub](https://jeremylong.github.io/DependencyCheck/)
+
+For more information about Grafeas please see the [Grafeas website](https://grafeas.io/) or [related projects and source code on GitHub](https://github.com/grafeas) 
 
 ## Requirements
 
@@ -20,7 +22,7 @@ To use the step, add the step to your pipeline (`wercker.yml`) with the appropri
   steps:
     - juanli-oracle/parse-upload-owasp-report:
         project: application
-        dependencyReportJSON: $WERCHER_CACHE_DIR/dependency-check-report.json
+        dependencyReportJSON: $WERCKER_CACHE_DIR/dependency-check-report.json
         urlGrafeas: http://localhost:80
 ```
 
