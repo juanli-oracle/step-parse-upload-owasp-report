@@ -43,8 +43,8 @@ fi
 #
 # Parse dependency-check-report.json to generate occurrences and upload to grafeas server
 #
-PARSE_CMD="java -classpath $CLASSPATH generateOccurrences $DEPENDENCY_REPORT_FILE"
-#PARSE_CMD="java -classpath $CLASSPATH generateOccurrences $DEPENDENCY_REPORT_FILE $URL_GRAFEAS"
+# PARSE_CMD="java -classpath $CLASSPATH generateOccurrences $DEPENDENCY_REPORT_FILE"
+PARSE_CMD="java -classpath $CLASSPATH generateOccurrences $DEPENDENCY_REPORT_FILE $URL_GRAFEAS"
 echo "$(date +%H:%M:%S): Parse dependency-check-report.json to generate occurrences and upload to grafeas server with command:"
 echo "% $PARSE_CMD"
 $PARSE_CMD
