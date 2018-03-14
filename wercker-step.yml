@@ -1,5 +1,5 @@
 name: parse-upload-owasp-report
-version: 0.1.0
+version: 0.2.0
 description: Parse OWASP dependency-check report to generate occurrences and upload to grafeas server
 keywords:
   - dependency-check-report
